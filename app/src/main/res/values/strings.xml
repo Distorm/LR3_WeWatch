@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Watch</string>
+    <string name="fab_text">Floating Action button</string>
+    <string name="no_movies_text">No movies found</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="todo">TODO</string>
+    <string name="release_year">Release Year</string>
+    <string name="add_movie">Add Movie</string>
+    <string name="no_movies">There are currently no movies in your watch list. Tap the button below to get started!</string>
+    <string name="delete">Delete</string>
+</resources>
