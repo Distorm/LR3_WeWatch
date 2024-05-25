@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeWatch</string>
+    <string name="fab_text">Floating Action button</string>
+    <string name="no_movies_text">No movies found</string>
+</resources>
