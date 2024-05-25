@@ -7,76 +7,84 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".contract.AddMovieActivity">
+    tools:context=".presentation.AddMovieActivity">
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="@dimen/dp_single"
-          android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-          <EditText
-              android:id="@+id/movie_title"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:hint="Название фильма"
-              android:maxLines="1"
-              android:singleLine="true" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <ImageButton
-            android:id="@+id/search_button"
-            style="?android:buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-60dp"
-            android:paddingBottom="5dp"
-            app:srcCompat="@drawable/ic_search_black_24dp" />
-      </LinearLayout>
-
-      <com.google.android.material.textfield.TextInputLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/movie_release_date"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Год выпуска"
-            android:maxLines="1"
-            android:singleLine="true" />
+            android:orientation="vertical">
 
-      </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_single"
+                android:orientation="horizontal">
 
-      <ImageView
-          android:id="@+id/movie_imageview"
-          android:layout_marginTop="@dimen/dp_double"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
-      <com.google.android.material.button.MaterialButton
-          android:id="@+id/add_movie_button"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="@dimen/dp_double"
-          android:padding="10dp"
-          android:text="Добавить фильм"
-          style="@style/Widget.MaterialComponents.Button" />
+                    <EditText
+                        android:id="@+id/movie_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/movie_title"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:autofillHints=""
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
-  </ScrollView>
+                <ImageButton
+                    android:id="@+id/search_button"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-60dp"
+                    android:onClick="goToSearchMovieActivity"
+                    android:paddingBottom="5dp"
+                    app:srcCompat="@drawable/ic_search_black_24dp"
+                    android:contentDescription="@string/todo" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/movie_release_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/release_year"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:autofillHints=""
+                    android:inputType="text"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/movie_imageview"
+                android:layout_marginTop="@dimen/dp_double"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_double"
+                android:onClick="onClickAddMovie"
+                style="@style/Widget.MaterialComponents.Button"
+                android:text="@string/add_movie"/>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
